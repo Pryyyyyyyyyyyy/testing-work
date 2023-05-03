@@ -1,0 +1,45 @@
+Title:
+
+Fix the trouble with the visibility of the "Взять в обработку" button.
+
+Description:
+
+The "Взять в обработку" button is appeared under the message with the order in the channel when the manager transfers the order to the "Новый" status in the admin telegram bot
+
+Expected result:
+
+The "Взять в обработку" button disappears when the status of the order changes and the manager takes the order for processing
+
+Actual result:
+
+The "Взять в обработку" button disappears and then reappears when the order status changes to "Новий"
+
+
+Steps to reproduce:
+
+Create a new order through the Shop bot
+
+The new order that was just created in the previous step will automatically appear in the "QA Admin chanell" bot
+
+Under the new order in the "QA Admin chanell" bot, click on the "Взять в обработку" button - this order will be displayed in the Admin bot
+
+In the Admin bot, click on the "Изменить статус заказа" button, then click on the "Статус выполнения" button and select "Новый"
+
+In the "QA Admin chanell" bot, the "Взять в обработку" button has appeared again
+
+
+Reproducibility:
+
+Always
+
+Severity:
+
+Major
+
+Priority:
+
+High
+
+Workaround:
+
+It is possible to bypass this bug only if you do not take the order at all

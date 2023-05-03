@@ -1,0 +1,47 @@
+Title:
+
+The appearance of the "Введіть номер ТТН" inscription in the Admin bot after clicking on the "Назад" button
+after changing the order status to "Доставляється" order status
+
+Description:
+
+After clicking the "Назад" button after changing the status of the order to "Доставляється", a response is received
+from the system in the form of the inscription "Введіть номер ТТН" in the Admin bot
+
+Expected result:
+
+By clicking on the "Назад" button, a message from the system "Введіть номер ТТН" appears and automatically deleted immediately
+
+Actual result:
+
+A message from the system "Введіть номер ТТН" appears but didn`t automatically deleted
+
+
+Steps to reproduce:
+
+Create a new order through the Shop bot
+
+The new order that was just created in the previous step will automatically appear in the "QA Admin chanell" bot
+
+Under the new order in the "QA Admin chanell" bot, click on the "Взять в обработку" button - this order will be displayed in the Admin bot
+
+In the Admin bot, click on the "Статус виконання" button and select "Доставляється"
+
+Click on the "Назад" button, simulating changes in the order, in response take a message from the system "Введіть номер ТТН"
+
+
+Reproducibility:
+
+Always
+
+Severity:
+
+Minor
+
+Priority:
+
+Medium
+
+Workaround:
+
+Only fix the system

@@ -1,0 +1,31 @@
+Title: The testing working of the Liqpay payment method when an order was created through the shop bot
+
+Description
+
+Preconditions:
+
+The Telegram is opened, Admin, Shop and QA Channel bots are started.
+
+The selected language is Ukrainian.
+
+Steps to reproduce:
+
+1. Place an order and set the "Liqpay" payment type in the Shop bot.
+2. Process the order in the Admin channel bot.
+3. Check the possibility of payment by Liqpay, changing the payment status to the "Очікує оплати" payment status in the Admin bot.
+4. Check whether the invoice message has appeared in the Shop bot. 
+5. Simulate payment in the Admin bot by clicking "Статус оплати - Сплачено".
+
+Actual result:
+1. The message about a new order with the "Спосіб оплати: Liqpay" note is appeared in the Admin Channel bot.
+2. The order is processed, and this is displayed by a newly received message in the Admin bot.
+3. The payment status is changed to "Очікує оплати" payment status.
+4. The invoice message is appeared and has the next text:
+"Замовлення №*
+Pay for order
+*,00UAH ТЕСТОВИЙ РАХУНОК
+Оплатити *,00UAH".
+5. The status of the current order is changed (Статус оплати: Сплачено) in the order window.
+
+Priority:
+Medium
